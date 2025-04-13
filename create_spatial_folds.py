@@ -106,7 +106,6 @@ train_folds, test_folds = create_train_test_folds(complete_folds)
 #save list of train folds
 with open('train_folds.pkl', 'wb') as f:
     pickle.dump(train_folds, f)
-
 #save list of test folds
 with open('test_folds.pkl', 'wb') as f:
     pickle.dump(test_folds, f)
