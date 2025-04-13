@@ -6,7 +6,7 @@ TrainingObservations_Positive.csv : a .csv file containing all positive training
 
 TrainingObservations_Negative.csv : a .csv file containing all negative training observations and input variables. Includes a 'Label' column to designate site type, 'Target' column to designate observation type, 'Cluster' column which to match positive dataset although the negative training observations are not spatially autocorrelated, and 48 topographic and geomorphological variables derived from remotely sensed imagery of the region. Dataset also does not include coordinate information.
 
-create_spatial_folds.py : python functions and scripts to automatically generate a reproducible set of training and test folds for cross-validation in ML models
+create_spatial_folds.py : Python functions and scripts to automatically generate a reproducible set of training and test folds for cross-validation in ML models
 
 train_folds.pkl : pickle object containing training folds output, readable as a list of 10 dataframes
 
