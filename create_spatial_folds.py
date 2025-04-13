@@ -1,6 +1,7 @@
 #import necessary libraries
 import pandas as pd
 import random
+import pickle
 
 #function to generate 10 lists for creating spatial folds, 5 with 
 #one observation between 1-15 (representing fossil site clusters)
@@ -101,3 +102,11 @@ complete_folds = create_folds(df_pos, df_back, 42, 'Cluster')
 
 #create training and test folds
 train_folds, test_folds = create_train_test_folds(complete_folds)
+
+#save list of train folds
+with open('train_folds.pkl', 'wb') as f:
+    pickle.dump(train_folds, f)
+
+#save list of test folds
+with open('test_folds.pkl', 'wb') as f:
+    pickle.dump(test_folds, f)
